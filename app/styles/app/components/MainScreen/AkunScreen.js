@@ -5,13 +5,14 @@ import {
   Text,
   View
 } from 'react-native';
-import MasukScreen from '../MasukScreen';
 
-export default class Pembayaran extends Component {
+export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <MasukScreen/>
+        <Text style={styles.welcome}>
+          Akun
+        </Text>
       </View>
     );
   }
@@ -20,7 +21,9 @@ export default class Pembayaran extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'skyblue',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'pink',
   },
   welcome: {
     fontSize: 20,

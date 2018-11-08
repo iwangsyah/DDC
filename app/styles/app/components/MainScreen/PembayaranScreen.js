@@ -1,3 +1,9 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,7 +17,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Akun
+          Katalog
         </Text>
       </View>
     );
@@ -23,10 +29,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'pink',
+    backgroundColor: 'skyblue',
   },
   welcome: {
-    fontFamily: 'GothamRounded-Book',
     fontSize: 20,
     textAlign: 'center',
     margin: 10,

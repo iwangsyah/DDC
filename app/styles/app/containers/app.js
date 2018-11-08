@@ -11,8 +11,8 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { Router, Scene, Stack, Tabs } from 'react-native-router-flux'
 import { connect, Provider } from 'react-redux'
 import {
-  ProfilActiveIcon,
-  ProfilInactiveIcon,
+  AkunActiveIcon,
+  AkunInactiveIcon,
   HomeActiveIcon,
   HomeInactiveIcon,
   KatalogActiveIcon,
@@ -27,10 +27,7 @@ import BerandaScreen from '../components/MainScreen/BerandaScreen'
 import KatalogScreen from '../components/MainScreen/KatalogScreen'
 import KomunitasScreen from '../components/MainScreen/KomunitasScreen'
 import PembayaranScreen from '../components/MainScreen/PembayaranScreen'
-import ProfilScreen from '../components/MainScreen/ProfilScreen'
-import PengaturanScreen from '../components/PengaturanScreen'
-import MasukScreen from '../components/MasukScreen'
-import DaftarScreen from '../components/DaftarScreen'
+import AkunScreen from '../components/MainScreen/AkunScreen'
 
 
 console.ignoredYellowBox = [
@@ -85,8 +82,8 @@ export default class Routs extends React.Component {
               case 'pembayaran':
                   icon = <PembayaranActiveIcon/>
                   break;
-              case 'profil':
-                  icon = <ProfilActiveIcon/>
+              case 'akun':
+                  icon = <AkunActiveIcon/>
                   break;
               default:
                   icon = null
@@ -105,8 +102,8 @@ export default class Routs extends React.Component {
                 case 'pembayaran':
                     icon = <PembayaranInactiveIcon/>
                     break;
-                case 'profil':
-                    icon = <ProfilInactiveIcon/>
+                case 'akun':
+                    icon = <AkunInactiveIcon/>
                     break;
                 default:
                     icon = null
@@ -132,10 +129,9 @@ export default class Routs extends React.Component {
                         animationEnabled={false}
                         activeTintColor={"rgb(40,40,40)"}
                         inactiveTintColor={"transparent"}
-                        tabBarStyle={{height:55, backgroundColor:'#FFFFFF', top: Platform.OS == 'ios' ? 1 : 0}}
+                        tabBarStyle={{height:55}}
                         labelStyle={{
                           alignSelf: 'center',
-                          fontFamily: 'GothamRounded-Book',
                           fontSize: 10
                         }} >
                         <Scene key='berandaScene' title='Beranda' icon={this.iconProfile} iconName='beranda'>
@@ -165,31 +161,15 @@ export default class Routs extends React.Component {
                                 title='Pembayaran'
                                 panHandlers={null}
                                 hideNavBar={true} />
-                            <Scene key='masuk'
-                                component={MasukScreen}
-                                title='Masuk'
-                                panHandlers={null}
-                                hideNavBar={true} />
                         </Scene>
-                        <Scene key='profilScene' title='Profil' icon={this.iconProfile} iconName='profil'>
-                            <Scene key='profil'
-                                component={ProfilScreen}
-                                title='Profil'
+                        <Scene key='akunScene' title='Akun' icon={this.iconProfile} iconName='akun'>
+                            <Scene key='akun'
+                                component={AkunScreen}
+                                title='Akun'
                                 panHandlers={null}
-                                direction='horizontal'
                                 hideNavBar={true} />
                         </Scene>
                     </Tabs>
-                    <Scene key='pengaturan'
-                        component={PengaturanScreen}
-                        title='Pengaturan'
-                        panHandlers={null}
-                        hideNavBar={true} />
-                    <Scene key='daftar'
-                        component={DaftarScreen}
-                        title='Daftar'
-                        panHandlers={null}
-                        hideNavBar={true} />
                 </Scene>
             </Router>
         )
