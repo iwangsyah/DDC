@@ -22,7 +22,7 @@ export default class ProfilScreen extends Component {
     return (
       <View style={styles.headerContainer}>
         <Text style={styles.titleHeader}>Profil</Text>
-        <TouchableOpacity onPress={() => Actions.pengaturan()}>
+        <TouchableOpacity style={{paddingLeft:20}} onPress={() => Actions.pengaturan()}>
           <PengaturanIcon/>
         </TouchableOpacity>
       </View>

@@ -19,7 +19,6 @@ export default StyleSheet.create({
   textNavbar: {
     fontFamily: 'GothamRounded-Book',
     fontSize: 16,
-    marginLeft: 24,
     color: 'rgb(40,40,40)'
   },
 })

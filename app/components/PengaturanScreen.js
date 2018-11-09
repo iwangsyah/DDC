@@ -17,7 +17,7 @@ export default class PengaturanScreen extends Component {
     return (
       <View style={navbarStyles.containerNavbar}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <TouchableOpacity onPress={() => Actions.pop()}>
+          <TouchableOpacity style={{paddingVertical:17, paddingRight:20}} onPress={() => Actions.pop()}>
             <BackIcon/>
           </TouchableOpacity>
           <Text style={navbarStyles.textNavbar}>Pengaturan</Text>
@@ -64,7 +64,7 @@ export default class PengaturanScreen extends Component {
           </TouchableOpacity>
           <TouchableOpacity style={styles.boxContentLogout}>
               <LogoutIcon/>
-              <Text style={[boxContentStyles.textTitle, { marginLeft:10, marginBottom:0 }]}>Keluar</Text>
+              <Text style={[boxContentStyles.textTitle, { marginLeft:10, marginBottom: Platform.OS == 'ios' ? 0 : 2 }]}>Keluar</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -82,6 +82,7 @@ const styles =  StyleSheet.create({
     alignItems: 'center',
     borderBottomWidth: 0.5,
     borderColor: 'rgb(220,220,220)',
-    paddingVertical: 15
+    paddingVertical: 17,
+    width: '95%'
   }
 })

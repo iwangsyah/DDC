@@ -15,6 +15,8 @@ import Go from '../assets/icons/go_ic';
 import Logout from '../assets/icons/logout_ic';
 import Eye from '../assets/icons/eye_ic';
 import EyeActive from '../assets/icons/eye_active_ic';
+import Search from '../assets/icons/search_ic';
+import Filter from '../assets/icons/filter_ic';
 
 export class ProfilActiveIcon extends Component {
   render () {
@@ -140,6 +142,22 @@ export class EyeActiveIcon extends Component {
   render () {
     return (
       <EyeActive/>
+    )
+  }
+}
+
+export class SearchIcon extends Component {
+  render () {
+    return (
+      <Search/>
+    )
+  }
+}
+
+export class FilterIcon extends Component {
+  render () {
+    return (
+      <Filter/>
     )
   }
 }

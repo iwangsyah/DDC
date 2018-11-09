@@ -9,6 +9,7 @@ import {
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Router, Scene, Stack, Tabs } from 'react-native-router-flux'
+import StackViewStyleInterpolator from 'react-navigation-stack/dist/views/StackView/StackViewStyleInterpolator';
 import { connect, Provider } from 'react-redux'
 import {
   ProfilActiveIcon,
@@ -123,7 +124,7 @@ export default class Routs extends React.Component {
     render() {
         return (
             <Router>
-                <Scene key='root'>
+                <Scene key='root' transitionConfig={() => ({screenInterpolator: StackViewStyleInterpolator.forHorizontal})}>
                     <Tabs key='root1'
                         tabBarPosition={"bottom"}
                         type="reset"
