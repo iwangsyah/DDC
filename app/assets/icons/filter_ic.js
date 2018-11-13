@@ -23,7 +23,7 @@ export default class FilterIcon extends Component {
               </g>
           </g>
       </svg>`}}
-      style={{ width:18, height:18 }} />
+      style={{ width:12, height:18, bottom: 0.5 }} />
     );
   }
 }

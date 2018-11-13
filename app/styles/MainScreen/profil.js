@@ -3,8 +3,7 @@ import { StyleSheet, Platform } from 'react-native'
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
-    paddingTop: Platform.OS == 'ios' ? 35 : 15
+    backgroundColor: '#FAFAFA',
   },
   titleHeader: {
     fontFamily: 'GothamRounded-Medium',
@@ -14,7 +13,9 @@ export default StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 15
+    paddingHorizontal: 15,
+    backgroundColor: '#FFFFFF',
+    paddingTop: Platform.OS == 'ios' ? 35 : 15
   },
   boxContent: {
     flexDirection:'row',

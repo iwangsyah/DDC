@@ -36,25 +36,3 @@ export default class KomunitasScreen extends Component {
     );
   }
 }
-
-const stylesCard = StyleSheet.create({
-  cardContainer: {
-    flexDirection: 'row',
-    paddingBottom: 35,
-  },
-  card: {
-    borderRadius: 3,
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 15,
-    paddingVertical: 5,
-    marginRight: 10,
-    shadowColor: 'rgba(119, 117, 117, 0.8)',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    elevation: 5,
-    shadowRadius: 3,
-    shadowOpacity: 0.5,
-  }
-});
