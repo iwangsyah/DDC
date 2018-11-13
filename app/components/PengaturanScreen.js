@@ -17,7 +17,7 @@ export default class PengaturanScreen extends Component {
     return (
       <View style={navbarStyles.containerNavbar}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <TouchableOpacity style={{paddingVertical:17, paddingRight:20}} onPress={() => Actions.pop()}>
+          <TouchableOpacity style={{paddingVertical:15, paddingRight:20}} onPress={() => Actions.pop()}>
             <BackIcon/>
           </TouchableOpacity>
           <Text style={navbarStyles.textNavbar}>Pengaturan</Text>
