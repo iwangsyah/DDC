@@ -17,6 +17,7 @@ import Eye from '../assets/icons/eye_ic';
 import EyeActive from '../assets/icons/eye_active_ic';
 import Search from '../assets/icons/search_ic';
 import Filter from '../assets/icons/filter_ic';
+import Checklist from '../assets/icons/checklist_ic';
 
 export class ProfilActiveIcon extends Component {
   render () {
@@ -158,6 +159,14 @@ export class FilterIcon extends Component {
   render () {
     return (
       <Filter/>
+    )
+  }
+}
+
+export class ChecklistIcon extends Component {
+  render () {
+    return (
+      <Checklist/>
     )
   }
 }

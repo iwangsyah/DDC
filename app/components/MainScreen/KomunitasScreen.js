@@ -29,7 +29,7 @@ export default class KomunitasScreen extends Component {
         <View style={styles.container}>
           {this.renderHeader()}
           <WebView
-            source={{uri: 'https://dusdusan.com/komunitas'}}
+            source={{uri: 'https://dusdusan.com/komunitas?webview=1'}}
             style={{flex: 1 }} // OR style={{height: 100, width: 100}}
           />
         </View>
